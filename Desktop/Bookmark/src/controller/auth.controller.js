@@ -8,9 +8,9 @@ const COOKIE_OPTIONS = {
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
-/* =========================
-   REGISTER
-========================= */
+
+ //  REGISTER
+
 export const register = async (req, res) => {
   try {
     const { email, password, handle } = req.body;
@@ -101,9 +101,9 @@ export const register = async (req, res) => {
   }
 };
 
-/* =========================
-   LOGIN
-========================= */
+
+//  LOGIN
+
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -159,9 +159,9 @@ export const login = async (req, res) => {
   }
 };
 
-/* =========================
-   LOGOUT
-========================= */
+
+//   LOGOUT
+
 export const logout = async (req, res) => {
   try {
     res.clearCookie("token", {
