@@ -99,7 +99,6 @@ Bookmark/
 * Bookmark Categories
 * Tags
 * Favorites
-* Dark Mode
 * Import/Export Bookmarks
 * Share Bookmarks
 * Pagination
