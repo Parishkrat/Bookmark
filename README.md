@@ -39,19 +39,41 @@ A modern full-stack Bookmark Manager that allows users to securely save, organiz
 ```bash
 Bookmark/
 │
+├── .env
+├── package.json
+├── package-lock.json
+├── vercel.json
+│
 ├── public/
 │   ├── css/
-│   ├── js/
-│   └── index.html
+│   │   └── style.css
+│   │
+│   └── pages/
+│       ├── dashboard.html
+│       ├── login.html
+│       ├── register.html
+│       └── profile.html
 │
-├── routes/
-├── controllers/
-├── middleware/
-├── config/
-├── server.js
-├── package.json
-└── README.md
-```
+└── src/
+    │
+    ├── index.js
+    │
+    ├── controller/
+    │   ├── auth.controller.js
+    │   ├── bookmarkcontroller.js
+    │   └── profilecontroller.js
+    │
+    ├── routes/
+    │   ├── auth.routes.js
+    │   ├── bookmark.routes.js
+    │   └── profile.routes.js
+    │
+    ├── middleware/
+    │   └── auth.middleware.js
+    │
+    └── lib/
+        ├── db.js
+        └── email.js
 
 
 ## 📌 Core Functionality
