@@ -6,9 +6,9 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import authRoutes from "./routes/Auth.js";
-import bookmarkRoutes from "./routes/Bookmark.js";
-import profileRoutes from "./routes/profiles.js";
+import authRoutes from "./routes/auth.routes.js";
+import bookmarkRoutes from "./routes/bookmark.routes.js";
+import profileRoutes from "./routes/profile.routes.js";
 
 dotenv.config();
 
@@ -28,17 +28,17 @@ app.use("/api/profile", profileRoutes);
 
 // Page routes — serve HTML files
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/pages/Login.html"));
+  res.sendFile(path.join(__dirname, "../public/pages/login.html"));
 });
 app.get("/register", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/pages/Register.html"));
+  res.sendFile(path.join(__dirname, "../public/pages/register.html"));
 });
 app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/pages/Dashboard.html"));
+  res.sendFile(path.join(__dirname, "../public/pages/dashboard.html"));
 });
 // Public profile page /@handle
 app.get("/:handle", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/pages/Profile.html"));
+  res.sendFile(path.join(__dirname, "../public/pages/profile.html"));
 });
 
 const PORT = process.env.PORT;
